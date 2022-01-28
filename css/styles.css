@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+}
+.container {
+  width: 60%;
+  margin: auto;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+#main {
+  padding: 20px;
+  margin: 10px;
+}
