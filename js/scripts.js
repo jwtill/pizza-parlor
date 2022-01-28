@@ -32,6 +32,8 @@ Pizza.prototype.cost = function() {
 $(document).ready(function() {
   $("form#order").submit (function() {
     event.preventDefault();
+    $("#pizza-size").html("");
+    $("#pizza-toppings").html("");
     let toppingsTotal = [];
     $("input:checkbox").each(function() { 
       if (ischecked = $(this).is(":checked")){
@@ -42,13 +44,22 @@ $(document).ready(function() {
     let newOrder = new Pizza(toppingsTotal, size);
     $("#total-msg").show();
     $("#pizza-size").html(newOrder.size);
+    
     if (newOrder.toppings.length > 1) {
-      $("#pizza-toppings").html(newOrder.toppings + "," + " ");
+      for (let i = 0; i < newOrder.toppings.length; i++) {
+        $("#pizza-toppings").append(newOrder.toppings[i] + ",");
+          if (i = newOrder.toppings.length - 2) {
+            $("#pizza-toppings").append(" " + newOrder.toppings[i]);
+          }
+          else if (i = newOrder.toppings.length - 1) {
+          $("#pizza-toppings").append(" and " + newOrder.toppings[i]);
+        }
+      }
     }
     else {
       $("#pizza-toppings").html(newOrder.toppings);
     }
-    $("#pizza-total").html("$" + newOrder.cost());
+    $("#pizza-total").html("$" + newOrder.cost() + ".");
   });
 });
 
