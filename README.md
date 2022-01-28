@@ -78,10 +78,10 @@ Code: new Pizza(cheese, "small")
       newPizza.cost()
 Expected Output: 0
 
-<!-- Test: "It should return $15 for small, 19 for medium, 23 for large size selected"
+Test: "It should return $15 for small, 19 for medium, 23 for large size selected"
 Code: new Pizza(cheese, "small")
       newPizza.cost()
-Expected Output: $4 -->
+Expected Output: $4
 
 
 
