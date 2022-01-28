@@ -1,3 +1,9 @@
+body {
+  background-image: url("../img/egg_pizza.jpg");
+  background-repeat:no-repeat repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 h1 {
   text-align: center;
 }

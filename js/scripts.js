@@ -4,9 +4,6 @@ function Pizza(toppings, size) {
   this.size = size;
 }
 
-let pepSaus = new Pizza(["pepperoni", "sausage"], "s"); // expected output 4 + 15 = 19
-let superDuper = new Pizza(["peppers", "CHEESE", "ears", "tanKs", "Butter"], "l"); //expected output 8 + 23 = 31
-
 Pizza.prototype.cost = function() {
   let toppingsCheck = this.toppings.map(toppings => toppings.toLowerCase());
   let pizzaCost = toppingsCheck.length * 2;  //calculate topping cost
@@ -14,20 +11,19 @@ Pizza.prototype.cost = function() {
   if (toppingsCheck.includes("cheese")) { //If cheese is included in the topping list, remove 2 from total
       pizzaCost = pizzaCost - 2; 
   }
-  if (this.size === "s") {
+  if (this.size === "small") {
     pizzaCost = pizzaCost + 15;
   }
-  else if(this.size === "m") {
+  else if(this.size === "medium") {
     pizzaCost = pizzaCost + 19;
   }
-  else if(this.size === "l") {
+  else if(this.size === "large") {
     pizzaCost = pizzaCost + 23;
   }
   else {
     console.log("error");
     return 0;
   }
-  console.log("Your pizza costs: $", pizzaCost)
   return pizzaCost;
 }
 
@@ -42,14 +38,18 @@ $(document).ready(function() {
         toppingsTotal.push(this.value);
       }
     });
-    console.log(toppingsTotal);
     let size = $("#size").val();
     let newOrder = new Pizza(toppingsTotal, size);
     $("#total-msg").show();
+    $("#pizza-size").html(newOrder.size);
+    if (newOrder.toppings.length > 1) {
+      $("#pizza-toppings").html(newOrder.toppings + "," + " ");
+    }
+    else {
+      $("#pizza-toppings").html(newOrder.toppings);
+    }
     $("#pizza-total").html("$" + newOrder.cost());
-
   });
-
 });
 
 
