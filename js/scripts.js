@@ -43,21 +43,21 @@ $(document).ready(function() {
     let size = $("#size").val();
     let newOrder = new Pizza(toppingsTotal, size);
     $("#total-msg").show();
-    $("#pizza-size").html(newOrder.size);
+    $("#pizza-size").html(newOrder.size); //print the pizza size to the html
     
-    if (newOrder.toppings.length > 1) {
-      for (let i = 0; i < newOrder.toppings.length; i++) {
-        $("#pizza-toppings").append(newOrder.toppings[i] + ",");
-          if (i = newOrder.toppings.length - 2) {
-            $("#pizza-toppings").append(" " + newOrder.toppings[i]);
+    if (newOrder.toppings.length > 1) { //if there's more than one topping
+      for (let i = 0; i < newOrder.toppings.length; i++) { //loop through toppings array
+        $("#pizza-toppings").append(newOrder.toppings[i] + ",");//print to html starting at [0], followed by a comma
+          if (i = newOrder.toppings.length - 2) { //if you get to the second to last item in the array
+            $("#pizza-toppings").append(" " + newOrder.toppings[i]);//just print the topping 
           }
-          else if (i = newOrder.toppings.length - 1) {
-          $("#pizza-toppings").append(" and " + newOrder.toppings[i]);
-        }
+          else if (i = newOrder.toppings.length - 1) { //when you get to the last item in the toppings array
+          $("#pizza-toppings").append(" and " + newOrder.toppings[i]);//print and followed by the last item
+          }
       }
     }
     else {
-      $("#pizza-toppings").html(newOrder.toppings);
+      $("#pizza-toppings").html(newOrder.toppings[0]); //if there's just one topping, just print that out
     }
     $("#pizza-total").html("$" + newOrder.cost() + ".");
   });
