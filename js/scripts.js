@@ -36,18 +36,17 @@ Pizza.prototype.cost = function() {
 $(document).ready(function() {
   $("form#order").submit (function() {
     event.preventDefault();
-
     let toppingsTotal = [];
-    $("input:checkbox").each(function() { //Get a number of total toppings for price
+    $("input:checkbox").each(function() { 
       if (ischecked = $(this).is(":checked")){
         toppingsTotal.push(this.value);
       }
     });
     console.log(toppingsTotal);
     let size = $("#size").val();
-    console.log("Size is: ", size);
     let newOrder = new Pizza(toppingsTotal, size);
-    console.log(newOrder.cost());
+    $("#total-msg").show();
+    $("#pizza-total").html("$" + newOrder.cost());
 
   });
 

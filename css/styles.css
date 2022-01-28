@@ -13,3 +13,6 @@ h1 {
   margin: 10px;
   
 }
+#total-msg {
+  display: none;
+}
