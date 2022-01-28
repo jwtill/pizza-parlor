@@ -68,6 +68,12 @@ Code: new Pizza(["pepperoni", "sausage"], "small")
       newPizza.cost()
 Expected Output: Pizza { toppings: ["pepperoni", "sausage"], size: "small" }
 
+Test: "It should return $2 for each topping selected"
+Code: new Pizza(["pepperoni", "sausage"], "small")
+      newPizza.cost()
+Expected Output: $4
+
+
 
 
 ----------------------------------------------------------------------------------------------------
