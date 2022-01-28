@@ -4,12 +4,24 @@ function Pizza(toppings, size) {
   this.size = size;
 }
 
+let pepSaus = new Pizza(["pepperoni", "sausage"], "small"); // expected output 4 + 15
+let superDuper = new Pizza(["peppers", "CHEESE", "ears", "tanKs", "Butter"], "small"); //expected output 8 + 15
+
 Pizza.prototype.cost = function() {
-  const toppings = this.toppings.length * 2;
-  return toppings;
-  return [this.toppings, this.size];
+  let toppingsCheck = this.toppings.map(toppings => toppings.toLowerCase());
+  
+  if (toppingsCheck.includes("cheese")) {
+    toppingsCheck.shift();
+  }
+  const toppingCost = toppingsCheck.length * 2;  
+  console.log("Cost of Toppings: ", toppingCost)
+  return toppingCost;
+  
 }
+  // if (this.toppings === "cheese") {
+  //   this.toppings = this.toppings.unShift;
 
-let pepSaus = new Pizza(["pepperoni", "sausage"], "small");
+  //   console.log("length afterward:", toppings.length);
+  // }
+  
 
-let superDuper = new Pizza(["dogs", "ears", "tanks", "butter"], "small");

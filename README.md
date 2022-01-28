@@ -71,7 +71,18 @@ Expected Output: Pizza { toppings: ["pepperoni", "sausage"], size: "small" }
 Test: "It should return $2 for each topping selected"
 Code: new Pizza(["pepperoni", "sausage"], "small")
       newPizza.cost()
-Expected Output: $4
+Expected Output: 0
+
+Test: "It should return no additional cost if cheese as a topping is selected"
+Code: new Pizza(cheese, "small")
+      newPizza.cost()
+Expected Output: 0
+
+<!-- Test: "It should return $15 for small, 19 for medium, 23 for large size selected"
+Code: new Pizza(cheese, "small")
+      newPizza.cost()
+Expected Output: $4 -->
+
 
 
 
