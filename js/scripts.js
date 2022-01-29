@@ -48,13 +48,21 @@ $(document).ready(function() {
     
 
     let numToppings = newOrder.toppings.length;
+    console.log("numTopping=", numToppings);
+    console.log(newOrder.toppings);
     // console.log(numToppings);
 
     if (numToppings > 1) {  
       for (let i = 0; i < numToppings; i++) {
-        if (i = numToppings - 1) {
+        if (i = numToppings - 2) { // if i is at second to last topping in array
+          console.log("wtf");
           $("#pizza-toppings").append(newOrder.toppings[i]);
         }
+        else if (i = numToppings - 1) {
+          console.log("loop at", i);
+          $("#pizza-toppings").append("and " + newOrder.toppings[numToppings - 1]);
+        }
+        
       // $("#pizza-toppings").append(newOrder.toppings[i], " ");
       }
     }
