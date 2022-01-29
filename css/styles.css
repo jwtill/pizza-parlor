@@ -3,6 +3,9 @@ body {
   background-repeat:no-repeat repeat;
   background-attachment: fixed;
   background-size: cover;
+  font-family: 'Dancing Script', cursive;
+  font-weight: bold;
+  font-size: larger;
 }
 h1 {
   text-align: center;

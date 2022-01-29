@@ -1,19 +1,3 @@
-Allow the user to choose toppings and size for the pizza they'd like to order.
-Create a pizza object constructor with properties for toppings and size.
-Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
-
-
-
-
-
-
-
-
-
-
-
-
-
 # _Pizza Parlor_
 
 #### By _**Josh Tillinghast**_
@@ -34,14 +18,14 @@ _**_
 
 ## Setup/Installation Requirements
 
-<!-- * _Simply download all files and folders, then open up index.html on your favorite browser. Then simply fill the form out, press submit, and a price will print on the screen. To do it again, press the reset button and the fields will return to their default state._ -->
+<!-- * _Simply download all files and folders, then open up index.html on your favorite browser. Then simply fill out what size pizza and what toppings you would like, press submit, and a price will print on the screen._ -->
 
 
 
 
 ## Known Bugs
 
-* _No known bugs at the time of this writing_
+* _The pizza you ordered message has some formatting issues_
 
 
 ## License
@@ -57,38 +41,38 @@ Copyright (c) _01/28/2022_ _Joshua Tillinghast_
 ---------------------------------------------------------------------------------------------
 ### Describe: Pizza()
 
-Test: "It should return a Pizza object with two properties for toppings and size"
+# Test: "It should return a Pizza object with two properties for toppings and size"
 Code: const myPizza = new Pizza(["pepperoni", "sausage"], "small");
 Expected Output: Pizza { toppings: ["pepperoni", "sausage"], size: "small" }
 
 ### Describe: Pizza.prototype.cost
 
-Test: "It should return the values of the current object"
+# Test: "It should return the values of the current object"
 Code: new Pizza(["pepperoni", "sausage"], "small")
       newPizza.cost()
 Expected Output: Pizza { toppings: ["pepperoni", "sausage"], size: "small" }
 
-Test: "It should return $2 for each topping selected"
+# Test: "It should return $2 for each topping selected"
 Code: new Pizza(["pepperoni", "sausage"], "small")
       newPizza.cost()
 Expected Output: 0
 
-Test: "It should return no additional cost if cheese as a topping is selected"
+# Test: "It should return no additional cost if cheese as a topping is selected"
 Code: new Pizza(cheese, "small")
       newPizza.cost()
 Expected Output: 0
 
-Test: "It should return $15 for small size"
+# Test: "It should return $15 for small size"
 Code: new Pizza(cheese, "s")
       newPizza.cost()
 Expected Output: $15
 
-Test: "It should return $19 for medium size"
+# Test: "It should return $19 for medium size"
 Code: new Pizza(cheese, "m")
       newPizza.cost()
 Expected Output: $19
 
-Test: "It should return $23 for large size"
+# Test: "It should return $23 for large size"
 Code: new Pizza(cheese, "l")
       newPizza.cost()
 Expected Output: $23
