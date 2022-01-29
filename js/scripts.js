@@ -6,9 +6,9 @@ function Pizza(toppings, size) {
 
 Pizza.prototype.cost = function() {
   let toppingsCheck = this.toppings.map(toppings => toppings.toLowerCase());
-  let pizzaCost = toppingsCheck.length * 2;  //calculate topping cost
+  let pizzaCost = toppingsCheck.length * 2;  
 
-  if (toppingsCheck.includes("cheese")) { //If cheese is included in the topping list, remove 2 from total
+  if (toppingsCheck.includes("cheese")) { 
       pizzaCost = pizzaCost - 2; 
   }
   if (this.size === "small") {
@@ -21,7 +21,6 @@ Pizza.prototype.cost = function() {
     pizzaCost = pizzaCost + 23;
   }
   else {
-    console.log("error");
     return 0;
   }
   return pizzaCost;
@@ -42,9 +41,25 @@ $(document).ready(function() {
     });
     let size = $("#size").val();
     let newOrder = new Pizza(toppingsTotal, size);
+    let numToppings = newOrder.toppings.length;
     $("#total-msg").show();
-    console.log(typeof newOrder.toppings);
-    $("#pizza-toppings").append(newOrder.toppings + ","); 
+
+    if (numToppings <= 1) {
+      $("#pizza-toppings").append(newOrder.toppings); 
+    }
+    else {
+      for (let i = 0; i < numToppings; i++) { 
+        if (i === numToppings - 1 ) { 
+          $("#pizza-toppings").append(newOrder.toppings[i]); 
+        }
+        else if (i === numToppings - 2) { 
+          $("#pizza-toppings").append(newOrder.toppings[i] + " and "); 
+        }
+        else {
+          $("#pizza-toppings").append(newOrder.toppings[i] + " , "); 
+        }
+      }
+    }
     $("#pizza-size").html(newOrder.size); 
     $("#pizza-total").html("$" + newOrder.cost() + ".");
   });
