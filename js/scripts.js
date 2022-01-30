@@ -39,9 +39,9 @@ $(document).ready(function() {
         toppingsTotal.push(this.value);
       }
     });
-    let size = $("#size").val();
-    let newOrder = new Pizza(toppingsTotal, size);
-    let numToppings = newOrder.toppings.length;
+    const size = $("#size").val();
+    const newOrder = new Pizza(toppingsTotal, size);
+    const numToppings = newOrder.toppings.length;
     $("#total-msg").show();
     
     if (numToppings <= 1) {
