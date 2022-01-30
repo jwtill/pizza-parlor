@@ -10,12 +10,17 @@ body {
 h1 {
   text-align: center;
 }
+form {
+  border: 1px solid red;
+  padding: 10px;
+}
 .container {
   width: 60%;
   margin: auto;
   margin-top: 20px;
   background-color: lightblue;
   border: 1px solid black;
+  opacity: .8;
 }
 #main {
   padding: 20px;
@@ -24,4 +29,8 @@ h1 {
 }
 #total-msg {
   display: none;
+  border: 1px solid black;
+  background-color: white;
+  margin-top: 15px;
+  padding: 10px;
 }

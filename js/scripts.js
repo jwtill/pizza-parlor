@@ -43,7 +43,7 @@ $(document).ready(function() {
     let newOrder = new Pizza(toppingsTotal, size);
     let numToppings = newOrder.toppings.length;
     $("#total-msg").show();
-
+    
     if (numToppings <= 1) {
       $("#pizza-toppings").append(newOrder.toppings); 
     }
