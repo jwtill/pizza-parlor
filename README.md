@@ -13,19 +13,20 @@
 * _JQuery_
 
 ## Description
+A simple website for selecting different sized pizzas with different toppings. After making prefered selections, the user is presented with the price of the given pizza with that amount of toppings.
 
 _**_
 
 ## Setup/Installation Requirements
 
-<!-- * _Simply download all files and folders, then open up index.html on your favorite browser. Then simply fill out what size pizza and what toppings you would like, press submit, and a price will print on the screen._ -->
+* _Simply download all files and folders, then open up index.html on your favorite browser. Then fill out what size pizza and what toppings you would like, press submit, and a price will print on the screen._
 
 
 
 
 ## Known Bugs
 
-* _The pizza you ordered message has some formatting issues_
+* _None at this time_
 
 
 ## License

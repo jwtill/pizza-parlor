@@ -35,7 +35,7 @@ $(document).ready(function() {
     $("#pizza-toppings").html("");
     let toppingsTotal = [];
     $("input:checkbox").each(function() { 
-      if (ischecked = $(this).is(":checked")){
+      if ($(this).is(":checked")){
         toppingsTotal.push(this.value);
       }
     });
