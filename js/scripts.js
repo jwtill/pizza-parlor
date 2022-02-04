@@ -73,7 +73,9 @@ $(document).ready(function() {
     }
     $("#pizza-size").html(newOrder.size); 
     $("#pizza-total").html("$" + newOrder.cost + ".");
-    console.log(newOrder);
+    if (newOrder.cost === 0) {
+      $("#total-msg").text("Error, please try again.");
+    }
   });
 });
 

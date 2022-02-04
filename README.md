@@ -42,9 +42,9 @@ Copyright (c) _01/28/2022_ _Joshua Tillinghast_
 ---------------------------------------------------------------------------------------------
 ### Describe: Pizza()
 
-# Test: "It should return a Pizza object with two properties for toppings and size"
+# Test: "It should return a Pizza object with two properties for toppings  size, and cost"
 Code: const myPizza = new Pizza(["pepperoni", "sausage"], "small");
-Expected Output: Pizza { toppings: ["pepperoni", "sausage"], size: "small" }
+Expected Output: Pizza { toppings: ["pepperoni", "sausage"], size: "small", cost:  }
 
 ### Describe: Pizza.prototype.cost
 
@@ -82,7 +82,7 @@ Expected Output: $23
 
 
 
-----------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------
 
 
 
